@@ -1,0 +1,292 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <style>
+            *{
+                font-family: Helvetica, Arial;
+            }
+
+            .select-card{
+                width: 125px;
+                border: 1px solid #ccd0d5;
+                padding: 0 8px;
+                font-size: 15px;
+                height: 36px;
+                border-radius: 4px;
+                margin-right: 5px;
+                background-color: #fff;
+            }
+
+            .Sing-Up-button{
+                height: 36px;
+                border-radius: 6px;
+                font-size: 17px;
+                padding: 0 16px;
+                border: none;
+                color: #fff;
+                background-color: #42b72a;
+                min-width: 194px;
+            }
+
+            .subtitle{
+                font-size: 12px;
+                margin-top: 2px;
+                margin-bottom: 3px;
+                color: #606770;
+            }
+
+            input{
+                border: 1px solid #ccd0d5;
+                border-radius: 5px;
+                background: #f5f6f7;
+                font-size: 15px;
+                padding: 11px;
+                margin-bottom: 10px;
+            }
+            .input-width-fstname{
+                width: 170px;
+                margin-right: 6px;
+            }
+            .input-width-sndname{
+                width: 170px;
+            }
+
+            .text-gender{
+                font-size: 15px;
+                line-height: 36px;
+                padding: 0 28px 0 10px;
+                width: 100%;
+            }
+
+            .input-width{
+                width: 374px;
+            }
+            .exit-position{
+              
+              margin-left: 396px;
+              margin-top: 12px;
+              height: 26px;
+              width: 26px;
+            }
+            .exit{
+                background-color: rgb(245 247 247 / 0%);
+                border: none;
+            }
+            body{
+                background-color: #fcfcfd;
+                justify-content: center;
+                align-items: center;
+            }
+            .card{
+                text-align: left;
+                box-shadow: 0 2px 4px #ddddde, 0 8px 16px #ddddde;
+                border-radius: 8px 8px;
+                width: 432px;
+                height: 600px;
+                position: relative;
+                background-color: #fff;
+                top: 0;
+                left: 0;
+            }
+            .card-down{
+                border-top: 1px solid #dadde1;
+                padding: 16px;
+                height: 488px;
+                position: relative;
+            }
+            .card-up {
+                align-items: center;
+                padding: 10px 16px;
+                position: relative;
+                z-index: 1;
+            }
+            .input-gender{
+                height: 36px;
+                margin: 0;
+                position: absolute;
+                right: 10px;
+                
+            }
+            .span-gender{
+                border: 1px solid #ccd0d5;
+                box-sizing: border-box;
+                display: inline-block;
+                flex: 0.52; 
+                height: 36px;
+                margin: 8px 6px 6px;
+                padding: 0;
+                position: relative;
+                border-radius: 4px;
+            }
+                
+            .gender{
+                display: flex;
+                flex-wrap: wrap;
+                margin: -8px -6px -6px;
+                width: 411px;
+            }
+            .space{
+                margin-bottom: 10px;
+            }
+
+            .text-info{
+                color: #777;
+                font-size: 11px;
+                line-height: 1.34;
+            }
+            .aling{
+                text-align: center;
+            }
+            .table.show{
+                display: flex;
+            }
+
+            .table.hide{
+                display: none;
+            }
+            .table{
+                position: absolute;
+                z-index: 7;
+                background-color: rgb(245 247 247 / 44%);
+                top: 0;
+                left: 0;
+                width: 100%;
+                height: 100%;
+                display: none;
+                justify-content: center;
+                align-items: center;
+            }
+        </style>
+        <script>
+            function hideModal() {
+                const modal = document.querySelector('#myTable');
+                modal.classList.remove('show');
+                
+            }
+
+            function showModal (){
+                const modal = document.querySelector('#myTable');
+                modal.classList.add('show');
+            }
+        </script>
+    </head>
+    <body>
+        <div>
+            <button onclick="showModal()">
+                mi boton de abrir
+            </button>  
+                <div id="myTable" class="table">
+                    <div class="card">
+                       <div class="exit-position">
+                          <button class="exit" onclick="hideModal()">
+                          <img src="https://static.xx.fbcdn.net/rsrc.php/v3/yC/r/Q0G2UVjVQ4_.png" alt="x" width="24" height="24">
+                        </button>
+                       </div>
+                       
+                       
+                        <div class="card-up">
+                            <h1>Sing Up</h1>
+                            <p>It’s quick and easy.</p>
+                        </div>
+                        <div class="card-down">
+                            <div>
+                                <input class="input-width-fstname" type="text" placeholder="First Name" id="Firstname">
+                                <input class="input-width-sndname" type="text" placeholder="Last name" id="Last name">  
+                            </div>
+                            <div>
+                                <input class="input-width" type="text" placeholder="Mobile number or email">
+                            </div>
+                            <div>
+                                <input class="input-width" type="password" placeholder="New password">
+                            </div>
+                            <div class="subtitle">
+                                Birthday
+                            </div>
+                            <div class="space">
+                                <select class="select-card" name="Month" id="month">
+                                    <option value="1" selected="1">Jan</option>
+                                    <option value="2">Feb</option>
+                                    <option value="3">Mar</option>
+                                    <option value="4">Apr</option>
+                                    <option value="5">May</option>
+                                    <option value="6">Jun</option>
+                                    <option value="7">Jul</option>
+                                    <option value="8">Aug</option>
+                                    <option value="9">Sep</option>
+                                    <option value="10">Oct</option>
+                                    <option value="11">Nov</option>
+                                    <option value="12">Dec</option>
+                                </select>
+                                    
+                                <select class="select-card" name="Day" id="day">
+                                    <option value="1" selected="1">1</option>
+                                    <option value="2">2</option>
+                                    <option value="3">3</option>
+                                    <option value="4">4</option>
+                                    <option value="5">5</option>
+                                    <option value="6">6</option>
+                                    <option value="7">7</option>
+                                    <option value="8">8</option>
+                                    <option value="9">9</option>
+                                    <option value="10">10</option>
+                                    <option value="11">11</option>
+                                    <option value="12">12</option>
+                                    <option value="13">13</option>
+                                    <option value="14">14</option>
+                                    <option value="15">15</option>
+                                    <option value="16">16</option>
+                                    <option value="17">17</option>
+                                    <option value="18">18</option>
+                                    <option value="19">19</option>
+                                    <option value="20">20</option>
+                                    <option value="21">21</option>
+                                    <option value="22">22</option>
+                                    <option value="23">23</option>
+                                    <option value="24">24</option>
+                                    <option value="25">25</option>
+                                    <option value="26">26</option>
+                                    <option value="27">27</option>
+                                    <option value="28">28</option>
+                                    <option value="29">29</option>
+                                    <option value="30">30</option>
+                                    <option value="31">31</option>
+                                </select>
+                                <select class="select-card" name="Year" id="year">
+                                    <option value="2022" selected="1">2022</option>
+                                    <option value="2021">2021</option>
+                                    <option value="2020">2020</option>
+                                    <option value="2019">2019</option>
+                                </select>
+                            </div>
+                            <div class="subtitle">
+                                Gender
+                            </div>
+                            <div class="gender">
+                                <span class="span-gender">
+                                    <label class="text-gender" for="">Female</label>  
+                                    <input class="input-gender" type="radio">
+                                </span>
+                                <span class="span-gender">
+                                    <label class="text-gender" for="">Male</label>  
+                                    <input class="input-gender" type="radio">
+                                </span>
+                                <span class="span-gender">
+                                    <label class="text-gender" for="">Custom</label>  
+                                    <input class="input-gender" type="radio">
+                                </span> 
+                            </div>
+                            
+                            <div>
+                                <p class="text-info">By clicking Sign Up, you agree to our link <a href="#">Terms</a>. Learn how we collect, use and share your data in our <a href="#">Data Policy</a> and how we use cookies and similar technology in our <a href="#">Cookies Policy</a>. You may receive SMS Notifications from us and can opt out any time.</p>
+                            </div>
+                            <div class="aling">
+                                <button class="Sing-Up-button">
+                                    <b>Sign Up</b>
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                </div> 
+        </div>
+    </body>
+</html>
